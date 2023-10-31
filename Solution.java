@@ -16,8 +16,10 @@ class Solution {
       char c = s.charAt(i);
       mp.put(c, mp.getOrDefault(c, 0) + 1);
 
-      // use less then or EQUAL TO to get first occuring value
+      // Use less then or equal to because last value will always 
+      //technically be the first value which is the criteria.
       if (cnt <= mp.get(c)) {
+        System.out.println(c);
         ans = c;
         cnt = mp.get(c);
       }
